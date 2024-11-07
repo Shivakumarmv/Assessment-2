@@ -54,10 +54,11 @@ docker build -t todo-img:v1 .
 
 ```
 
-docker run -d -p 8000:8000 todo-img:v1
+docker run -d --name todo-server -p 8000:8000 todo-img:v1
 ```
 
-![Screenshot 2024-11-07 144732](https://github.com/user-attachments/assets/196db26d-5e66-4a59-8b85-530405e6cc40)
+![Screenshot 2024-11-07 151329](https://github.com/user-attachments/assets/b041b105-f252-4c6f-b939-f95ca15ff723)
+
 
 
 # Open port in security group
