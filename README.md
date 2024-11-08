@@ -7,7 +7,8 @@ Navigate to instance page and select instance recently launched and click on con
 
 Scroll down and click connect button 
 
-![Screenshot 2024-11-06 150908](https://github.com/user-attachments/assets/504d7daa-c15f-41d6-b554-744a2ee103fb)
+![Screenshot 2024-11-06 150908](https://github.com/user-attachments/assets/5fc966e5-ab42-43a1-8716-f46bac8da6d0)
+
 
 
 # Install docker 
@@ -18,9 +19,9 @@ yum install docker -y
 docker --version
 
 ```
-![Screenshot 2024-11-07 124141](https://github.com/user-attachments/assets/22bb00ab-2310-48d4-9a58-808cc1310c38)
+![Screenshot 2024-11-07 124141](https://github.com/user-attachments/assets/9b27040c-9e7f-497f-86bc-7dbafda6dbf9)
 
-![Screenshot 2024-11-07 124211](https://github.com/user-attachments/assets/e9fe070a-a825-4c3a-8ee0-db59f6220f1b)
+![Screenshot 2024-11-07 124211](https://github.com/user-attachments/assets/4ba075a8-6135-4842-96af-0c0344346271)
 
 # Start the service
 
@@ -30,16 +31,17 @@ systemctl start docker
 systemctl status docker
 
 ```
+![Screenshot 2024-11-07 124301](https://github.com/user-attachments/assets/74b6685c-596c-40c2-a7d0-cdca88c5019b)
 
-![Screenshot 2024-11-07 124301](https://github.com/user-attachments/assets/669ea7ca-f926-4ad1-8c89-8472f157aa86)
+
 
 # Clone the repo
 
-![Screenshot 2024-11-07 130740](https://github.com/user-attachments/assets/0f261753-f74e-4faf-aa87-22e9e47821df)
+![Screenshot 2024-11-07 130740](https://github.com/user-attachments/assets/ee6fe5cf-037f-452e-a745-7bbd00e1d228)
 
 # Docker file 
 
-![Screenshot 2024-11-07 144019](https://github.com/user-attachments/assets/c5df5724-a19f-4540-a389-3f8326838e69)
+![Screenshot 2024-11-07 144019](https://github.com/user-attachments/assets/d6136034-a36d-47bd-be84-6606d58e9299)
 
 # Build the Docker Image
 
@@ -47,8 +49,9 @@ systemctl status docker
 docker build -t todo-img:v1 .
 
 ```
+![Screenshot 2024-11-07 144336](https://github.com/user-attachments/assets/d0d9407b-9d2a-45d0-a5c9-e40fe6b3a318)
 
-![Screenshot 2024-11-07 144336](https://github.com/user-attachments/assets/f242ef59-75fb-4970-ac09-6b7d2540fac6)
+
 
 # Run the Docker Container
 
@@ -57,15 +60,14 @@ docker build -t todo-img:v1 .
 docker run -d --name todo-server -p 8000:8000 todo-img:v1
 ```
 
-![Screenshot 2024-11-07 151329](https://github.com/user-attachments/assets/b041b105-f252-4c6f-b939-f95ca15ff723)
-
+![Screenshot 2024-11-07 151329](https://github.com/user-attachments/assets/581bdf39-7588-4de6-811f-2f68fd0838e4)
 
 
 # Open port in security group
 
 Go to the AWS Management Console -> Navigate to EC2 Instances and select your instance -> Under Security edit the Security Group for your instance click on inbound rule -> open 8000 port 
 
-![Screenshot 2024-11-07 144925](https://github.com/user-attachments/assets/0475029c-22ed-4889-a290-3f5b3d1ed8e0)
+![Screenshot 2024-11-07 144925](https://github.com/user-attachments/assets/638c103b-ede9-47c9-ae03-ffa1fab133f8)
 
 
 # Access the application
@@ -73,14 +75,12 @@ Go to the AWS Management Console -> Navigate to EC2 Instances and select your in
 select server and copy the public ip address and paste in browser with the specified port number (eg.107.23.243.219:8000) If we can see the website in fully functional mode, it means we have properly set up and configured 
 
 
-![Screenshot 2024-11-07 145641](https://github.com/user-attachments/assets/8ab5289c-e3fb-4083-9243-641570a837b4)
+![Screenshot 2024-11-07 145641](https://github.com/user-attachments/assets/705f12b6-98a7-4466-8194-43a1c4d55ca0)
+
 
 # Push to github
 
-![Screenshot 2024-11-07 145828](https://github.com/user-attachments/assets/33d6c15e-2907-495e-9690-498d156429e4)
+![Screenshot 2024-11-07 145828](https://github.com/user-attachments/assets/46143f3e-28dd-4813-ba1d-4f89f0060e41)
 
-
-![Screenshot 2024-11-07 150008](https://github.com/user-attachments/assets/c06886f4-ebf5-42dd-9791-65bdd1114251)
-
-
+![Screenshot 2024-11-07 150008](https://github.com/user-attachments/assets/533bfed5-02d1-4864-9dfb-7ae5be1e0712)
 
